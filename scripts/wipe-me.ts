@@ -4,7 +4,7 @@
 // Uso: WALLET=<base58> deno run -A scripts/wipe-me.ts
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
-const URL = 'https://qvoytjrfuyeammxsuwtx.supabase.co'
+const URL = process.env.SUPABASE_URL
 const KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
 const WALLET = Deno.env.get('WALLET') ?? 'CQziGuEV4i8yGBHwQQJMpe6tACSMR5jWUWjmYSGVDAhW'
 

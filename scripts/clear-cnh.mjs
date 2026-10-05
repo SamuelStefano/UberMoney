@@ -9,7 +9,7 @@ const env = Object.fromEntries(
     .map((l) => { const i = l.indexOf('='); return [l.slice(0, i).trim(), l.slice(i + 1).trim()] })
 )
 
-const URL_ = 'https://qvoytjrfuyeammxsuwtx.supabase.co'
+const URL_ = process.env.SUPABASE_URL
 const KEY = env.SUPABASE_SERVICE_ROLE_KEY
 const WALLET = process.env.WALLET ?? 'CQziGuEV4i8yGBHwQQJMpe6tACSMR5jWUWjmYSGVDAhW'
 
