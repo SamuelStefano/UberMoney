@@ -7,7 +7,7 @@ import nacl from 'tweetnacl'
 import bs58 from 'bs58'
 import fs from 'node:fs'
 
-const SUPABASE_URL = process.env.SUPABASE_URL ?? 'https://qvoytjrfuyeammxsuwtx.supabase.co'
+const SUPABASE_URL = process.env.SUPABASE_URL
 const ANON_KEY = fs.readFileSync('/home/samuel/uber-money/.env', 'utf8')
   .split('\n').find((l) => l.startsWith('VITE_SUPABASE_ANON_KEY='))!.split('=')[1]
 
